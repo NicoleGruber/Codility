@@ -19,7 +19,12 @@ N é um número inteiro dentro do intervalo [1..2.147.483.647].'''
 
 
 def solution(N):
-    num_bin = bin(N)[2:]
-    resultado = num_bin.strip('0').strip('1').split('1')
-    resultado = len(max(resultado))
-    return resultado
+    num_bin = bin(N)[2:]               #Transformando o numero em binário e pegando apenas do indice 2 pra frente
+    resultado = num_bin.strip('0')     #Retirando o numero 0 de ambos os lados
+    resultado = resultado.strip('1')   #Retirando o numero 1 de ambos os lados
+    lista_resul = resultado.split('1') #Transformando em lista e Retirando todos os numeros 1 que tem no meio
+    lista_resul = len(max(lista_resul))#Contando quantos 0 tem no valor maximo da lista
+    return lista_resul
+
+print(solution(50000))
+print(bin(50000))
