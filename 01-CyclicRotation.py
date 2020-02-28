@@ -36,6 +36,6 @@ def solution(A,K):
     if not A:
         return A
     for vezes in range(K):
-        ultimo_valor = A.pop() #A Função pop pega o ultimo valor da lista, nesse caso esse valor foi salvo em uma variável
-        A.insert(0, ultimo_valor) #Inserindo na lista no indice 0 o valor que que foi salvo na variável
+        ultimo_valor = A.pop()     #A Função pop pega o ultimo valor da lista, nesse caso esse valor foi salvo em uma variável
+        A.insert(0, ultimo_valor)  #Inserindo na lista no indice 0 o valor que que foi salvo na variável
     return A
