@@ -25,6 +25,3 @@ def solution(N):
     lista_resul = resultado.split('1') #Transformando em lista e Retirando todos os numeros 1 que tem no meio
     lista_resul = len(max(lista_resul))#Contando quantos 0 tem no valor maximo da lista
     return lista_resul
-
-print(solution(50000))
-print(bin(50000))
