@@ -30,7 +30,6 @@ cada elemento da matriz A é um número inteiro dentro do intervalo [-1.000..1.0
 Na sua solução, concentre-se na correção. O desempenho da sua solução não será o foco da avaliação.
 '''
 
-A = [1, 2, 3, 4]
 
 def solution(A,K):
     if not A:
@@ -39,3 +38,5 @@ def solution(A,K):
         ultimo_valor = A.pop()     #A Função pop pega o ultimo valor da lista, nesse caso esse valor foi salvo em uma variável
         A.insert(0, ultimo_valor)  #Inserindo na lista no indice 0 o valor que que foi salvo na variável
     return A
+
+
