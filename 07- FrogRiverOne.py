@@ -51,9 +51,6 @@ N e X são números inteiros dentro do intervalo [1..100.000];
 cada elemento da matriz A é um número inteiro dentro do intervalo [1..X].'''
 
 
-A = [1, 3, 1, 4, 2, 3, 2, 4]
-
-
 def solution(X,A):
     b = set()
     for i,j in enumerate(A):
@@ -62,5 +59,3 @@ def solution(X,A):
             return i
     return -1
 
-
-print(solution(5,A))
