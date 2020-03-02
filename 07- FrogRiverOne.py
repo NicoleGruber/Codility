@@ -49,13 +49,18 @@ Escreva um algoritmo eficiente para as seguintes suposições:
 
 N e X são números inteiros dentro do intervalo [1..100.000];
 cada elemento da matriz A é um número inteiro dentro do intervalo [1..X].'''
-A = [1,2,3,4,2,1,4,5]
-def solution(X, A):
-    f = []
-    for folhas in A:
-        if folhas <= X:
-            if not folhas in f:
-                f.append(folhas)
-    return f
+
+
+A = [1, 3, 1, 4, 2, 3, 2, 4]
+
+
+def solution(X,A):
+    b = set()
+    for i,j in enumerate(A):
+        b.add(j)
+        if len(b) == X:
+            return i
+    return -1
+
 
 print(solution(5,A))
