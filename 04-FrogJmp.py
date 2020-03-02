@@ -26,13 +26,9 @@ Escreva um algoritmo eficiente para as seguintes suposições:
 X, Y e D são números inteiros dentro do intervalo [1..1.000.000.000];
 X ≤ Y.'''
 
-
-
-def solucao(X, Y, D):
-    res = Y-X
-    salto = res/D
-    salto = round(salto + 0.5)
-    return salto
-
-print(solucao(50,100,20))
-
+def solution(X, Y, D):
+    distancia = Y - X       #Distancia total que o sapo tera que pular
+    pulos = distancia // D  #Pulos que ele terá que dar
+    if distancia % D != 0:  #Verificando se o resto da divisão é diferente de 0
+        pulos += 1          #Arredondando os pulos
+    return pulos
