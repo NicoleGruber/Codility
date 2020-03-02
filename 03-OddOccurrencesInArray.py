@@ -28,9 +28,12 @@ N é um número inteiro ímpar dentro do intervalo [1 .. 1.000.000];
 cada elemento da matriz A é um número inteiro dentro do intervalo [1..1.000.000.000];
 todos, exceto um dos valores em A, ocorrem um número par de vezes.'''
 
-A = [2,3,4,5,4,3,2]
-def verificacao(A):
-    for numero in A:
-        if A.count(numero) == 1:
-            return numero
-print(verificacao(A))
+def solution(A):
+    A.sort()                    #Colocando os numeros inteiros da lista em ordem crescente
+    if len(A) == 1:             #Verificando se a lista contem apenas 1 elemento
+        return A[0]                #Se tiver apenas 1, retornando esse numero
+    for i in range(0,len(A),2): #FOR para ir verificando na lista de dois em dois elementos
+        if i == len(A) - 1:     #Verificando se o numero mais alto que é o numero que não tem repeticao
+            return A[i]            #Se for, retorna o numero
+        if A[i] != A[i + 1]:    #Fazendo a verificão dos demais numeros
+            return A[i]            #Retorna o numero sem repeticao
