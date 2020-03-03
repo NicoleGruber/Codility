@@ -43,16 +43,21 @@ N é um número inteiro dentro do intervalo [2..100.000];
 cada elemento da matriz A é um número inteiro dentro do intervalo [-1.000..1.000].'''
 
 A = [3, 1, 2, 4, 3]
-def solution(A):
-    diferenca = abs(sum(A))
-    b = []
-    for i in range(0,len(A)-1):
-        b.append(A[0])
-        A.remove(A[0])
-        somaA = sum(A)
-        somaB = sum(b)
-        total = abs(somaB - somaA)
-        if total < diferenca:
-            diferenca = total
+def solution(A:list):
+    cont = 1
+    diferenca = 0
+    dif = sum(A)
+    for i in range(0,len(A)):
+        lista1 = []
+        lista1 = A.split(5)
+        #lista1 = A.split(A[cont])
+        lista1 = sum(lista1)
+        if lista1 < dif:
+            diferenca == (sum(lista1))
+        cont +=1
     return diferenca
+
 print(solution(A))
+
+lista1 = []
+lista1 = A.split
