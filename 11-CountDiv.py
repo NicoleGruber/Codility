@@ -15,16 +15,17 @@ Escreva um algoritmo eficiente para as seguintes suposições:
 A e B são números inteiros dentro do intervalo [0..2.000.000.000];
 K é um número inteiro dentro do intervalo [1 .. 2.000.000.000];
 A ≤ B.'''
-A = 2
-B = 10
-K = 2
+A = 101
+B = 123000000
+K = 10000
 def solution (A, B, K):
     lista_num = []
+    div = []
     for i in range(A,B+1):
-        resto = i % K
-        if resto == 0:
-            lista_num.append(i)
-    return len(lista_num)
+        #if i % K== 0:
+            #lista_num.append(i)
+        div = set(i % K == 0)
+    return len(div)
 
 
 

@@ -55,7 +55,7 @@ N = [0,0]
 def solution(N, A):
     for num in A:
         if num > len(N):
-            for numero in N:
-                N[numero] += 1
+            for n in N:
+                n += 1
             return N
 print(solution(N,A))

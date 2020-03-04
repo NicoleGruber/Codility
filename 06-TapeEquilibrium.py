@@ -42,22 +42,36 @@ Escreva um algoritmo eficiente para as seguintes suposições:
 N é um número inteiro dentro do intervalo [2..100.000];
 cada elemento da matriz A é um número inteiro dentro do intervalo [-1.000..1.000].'''
 
-A = [3, 1, 2, 4, 3]
+#A = [3, 1, 2, 4, 3]
+#def solution(A:list):
+   # cont = 1
+   # diferenca = 0
+   # dif = sum(A)
+   # for i in range(0,len(A)):
+   #     lista1 = []
+     #   lista1 = A.split(5)
+      #  #lista1 = A.split(A[cont])
+     #   lista1 = sum(lista1)
+    #    if lista1 < dif:
+   #         diferenca == (sum(lista1))
+  #      cont +=1
+ #   return diferenca
+
+#print(solution(A))
+
+#lista1 = []
+#lista1 = A.split
+
+
+A = [3, 1, 2, 4, 3,0,5,8,9]
 def solution(A:list):
-    cont = 1
-    diferenca = 0
-    dif = sum(A)
+    diferenca_total = abs(sum(A))
     for i in range(0,len(A)):
-        lista1 = []
-        lista1 = A.split(5)
-        #lista1 = A.split(A[cont])
-        lista1 = sum(lista1)
-        if lista1 < dif:
-            diferenca == (sum(lista1))
-        cont +=1
-    return diferenca
+        somaA = sum(A[0:i+1])
+        somaB = sum(A[i+1:])
+        diferenca = abs(somaA - somaB)
+        if diferenca < diferenca_total:
+            diferenca_total = diferenca
+    return diferenca_total
 
 print(solution(A))
-
-lista1 = []
-lista1 = A.split
